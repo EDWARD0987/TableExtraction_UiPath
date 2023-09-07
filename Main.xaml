@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="973,2608" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="902,2608" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -114,12 +114,12 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="ACME_URL" CacheStrategy="None" DisplayName="Get Asset" FolderPath="ReFramework_RPA_Challenge" sap:VirtualizedContainerService.HintSize="530,143" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="ExcelPath" CacheStrategy="None" DisplayName="Get Asset" FolderPath="ACME_PORTAL" sap:VirtualizedContainerService.HintSize="530,143" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
       <ui:GetRobotAsset.Value>
         <OutArgument x:TypeArguments="x:String" />
       </ui:GetRobotAsset.Value>
     </ui:GetRobotAsset>
-    <ui:GetRobotCredential Password="{x:Null}" TimeoutMS="{x:Null}" Username="{x:Null}" AssetName="ACME_CREDENTIALS" CacheStrategy="None" DisplayName="Get Credential" FolderPath="ReFramework_RPA_Challenge" sap:VirtualizedContainerService.HintSize="530,143" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" />
+    <ui:GetRobotCredential Password="{x:Null}" TimeoutMS="{x:Null}" Username="{x:Null}" AssetName="ACME_CREDENTIALS" CacheStrategy="None" DisplayName="Get Credential" FolderPath="ACME_PORTAL" sap:VirtualizedContainerService.HintSize="530,143" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" />
     <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: ACME System 1 - Log In" sap:VirtualizedContainerService.HintSize="530,2066" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="de55e70e-adc0-4db2-955c-037084866634" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
@@ -131,11 +131,7 @@
               <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
               <Variable x:TypeArguments="x:String" Name="FileName" />
               <Variable x:TypeArguments="sd:DataTable" Name="dtData" />
-              <Variable x:TypeArguments="x:String" Name="Password">
-                <Variable.Default>
-                  <Literal x:TypeArguments="x:String">xpmlxnwdtowfwclk</Literal>
-                </Variable.Default>
-              </Variable>
+              <Variable x:TypeArguments="x:String" Default="xpmlxnwdtowfwclk" Name="Password" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -184,10 +180,10 @@
             </uix:NExtractData>
             <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Log Out'" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="de55e70e-adc0-4db2-955c-037084866634" Version="V3">
               <uix:NClick.Target>
-                <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/work-items?page=6" CvTextArgument="Log Out" CvType="Text" DesignTimeRectangle="1479, 142, 51, 16" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Log Out'" Guid="c16395ce-f6c6-4cbd-a46c-19bc56e2a955" InformativeScreenshot="a0b84697e90716d053b66af67e4ef319.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Work Items' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V2" Visibility="Interactive">
+                <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/work-items?page=12" CvTextArgument="Log Out" CvType="Text" DesignTimeRectangle="1487, 97, 52, 16" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Log Out'" Guid="a5e848b3-da7f-4e0c-9812-a75d9223916d" InformativeScreenshot="77b98b6ee0fcb0ef7e3fd5f7e20c7dc2.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Work Items' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V2" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
                     <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
-                      <uix:Target CvTextArgument="Switch to new theme" CvType="Text" DesignTimeRectangle="1319, 141, 131, 14" ElementType="Text" FriendlyName="'Switch to new theme'" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                      <uix:Target CvTextArgument="Switch to new theme" CvType="Text" DesignTimeRectangle="1328, 97, 131, 13" ElementType="Text" FriendlyName="'Switch to new theme'" SearchSteps="CV" TargetType="ComputerVisionBased" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
                 </uix:TargetAnchorable>
@@ -202,14 +198,14 @@
               </Assign.Value>
             </Assign>
             <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[ExtractDataTable]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="434,116" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet1" WorkbookPath="[FileName]" />
-            <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" Body="&lt;p&gt;Hi Everyone,&lt;/p&gt;&#xD;&#xA;&lt;p&gt;Attached To this email are ACME PORTAL LOGS For YOUR PERUSAL&lt;/p&gt;&#xD;&#xA;&lt;p&gt;As well As steps On Automating ACME PORTAL With UiPath Modern experience&lt;/p&gt;&#xD;&#xA;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&#xD;&#xA;&lt;p&gt;Thanks&lt;/p&gt;&#xD;&#xA;&lt;p&gt;Robot&lt;/p&gt;" DisplayName="Send SMTP Mail Message" Email="edwarddoku123@gmail.com" EnableSSL="True" From="edwarddoku123@gmail.com" sap:VirtualizedContainerService.HintSize="434,152" sap2010:WorkflowViewState.IdRef="SendMail_1" IgnoreCRL="False" IsBodyHtml="True" Password="[Password]" Port="465" SecureConnection="Auto" Server="smtp.gmail.com" Subject="ACME AUTOMATIONS" To="edwarddoku123@gmail.com, wimamare85@gmail.com, jamesdey24@gmail.com">
+            <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" Body="&lt;p&gt;Hi Everyone,&lt;/p&gt;&#xA;&lt;p&gt;Attached To this email are ACME PORTAL LOGS For YOUR PERUSAL&lt;/p&gt;&#xA;&lt;p&gt;As well As steps On Automating ACME PORTAL With UiPath Modern experience&lt;/p&gt;&#xA;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&#xA;&lt;p&gt;Thanks&lt;/p&gt;&#xA;&lt;p&gt;Robot&lt;/p&gt;" DisplayName="Send SMTP Mail Message" Email="edwarddoku123@gmail.com" EnableSSL="True" From="edwarddoku123@gmail.com" sap:VirtualizedContainerService.HintSize="434,152" sap2010:WorkflowViewState.IdRef="SendMail_1" IgnoreCRL="False" IsBodyHtml="True" Password="[Password]" Port="465" SecureConnection="Auto" Server="smtp.gmail.com" Subject="ACME AUTOMATIONS" To="edwarddoku123@gmail.com, wimamare85@gmail.com, jamesdey24@gmail.com">
               <ui:SendMail.Files>
                 <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
                   <InArgument x:TypeArguments="x:String">
                     <VisualBasicValue x:TypeArguments="x:String" ExpressionText="FileName" />
                   </InArgument>
                   <InArgument x:TypeArguments="x:String">
-                    <Literal x:TypeArguments="x:String">C:\Users\Edward Doku\OneDrive\Documents\TrainingRPA\RPA_PROCESS_FLOW.docx</Literal>
+                    <Literal x:TypeArguments="x:String">C:\Users\Edward Doku\OneDrive\Documents\TrainingRPA\WordDocs\RPA_PROCESS_FLOW.docx</Literal>
                   </InArgument>
                 </scg:List>
               </ui:SendMail.Files>
