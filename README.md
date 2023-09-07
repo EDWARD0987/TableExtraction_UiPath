@@ -1,3 +1,3 @@
 # TableExtraction_UiPath
 Extracting Table with UiPath Table extraction
-Excel file has a timestamp which creates a new excel on runtime
+Excel file used has a timestamp which creates a new excel on runtime to avoid overwriting existing excel
